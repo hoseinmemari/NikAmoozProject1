@@ -9,10 +9,10 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5397.1"
   DTS:LocaleID="1033"
-  DTS:ObjectName="SSISExcer4"
+  DTS:ObjectName="SSIS-S4-01"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{CB586BE4-A010-4659-9726-115B5486F150}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{4F788845-C23B-42A4-91A8-1019139E7049}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

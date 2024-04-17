@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-RFDJ7ET</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPT63UuVJ0kmg4fA7o92jdwAAAAACAAAAAAAQZgAAAAEAACAAAADggDm7rO700ND96udCSugTiJg7mswhtX4VzW80VRZGXgAAAAAOgAAAAAIAACAAAAAqHxvkd0aAE/GITHPB6zp++89Xrv53Objx5UfaXt1iF5AAAAAw+zPcipg0mLDENlTwO4YGsGbvz5fJGfQ8d5XnSEkiueM2UWzp/yQp9e/v83il96IP6CSZEVQpuTFAliN608hb1gwLiAg8SqlehpXi1sUhaVqRdfkbds3xchhIh2TcvGEkn7nIZlJvDtU0YSlqn9vs7Jff+4eW1acp19lE16X+8HbLvX4lzvs7JiiHFVgNeKFAAAAA3JrbqRuLPVPpr0JRGc4BdC0KKmk4vpz8VNZWNTyjKf7oTbwUeA61mN2yx9g3bicTcvuULHBXx0kidGHxdYVtmg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPT63UuVJ0kmg4fA7o92jdwAAAAACAAAAAAAQZgAAAAEAACAAAADGF6L/i+zQwYJeFTRDN4OAp+GYSPjoE0FCFgLjNHSqTgAAAAAOgAAAAAIAACAAAAAPKhvAhtDafKOIZIMU/vG1DsvaZyua9XHT7qxpBMucnpAAAABVLJwrN06W1wYRynp7JQXm3J5W68PAI9NEzCI2gmQVm92UXV7FADLryH0Vg9z32Qzb3Qq8NpWfPh6B97lZMeq4bZki0hdGtwdnGxY5rXe/zKSQlFOz+eHn0NqTLUyC6KlgodTiQdUjrA/eNT1Y8wR5Az8c/aXS936VsDjmNM4WfA2GUOCF/KFUMzVOAzxyODVAAAAAVfaMPow6f+KKy0ekci98BIyuhIsGlgCbcu74Jl5dbPifD1e4HrTjtjGj+nxL1kd/kUm1ggrZzJBztDUhyYSMbw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -37,7 +37,7 @@
           <SSIS:Package SSIS:Name="SSISExcer1.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SSISExcer2.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SSISExcer3.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="SSISExcer4.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="SSIS-S4-01.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -1100,16 +1100,16 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="SSISExcer4.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="SSIS-S4-01.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{7829E15E-D6A6-4785-B9B1-0FC98D3AA880}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">SSISExcer4</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">SSIS-S4-01</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{40254D66-20BB-4C09-B40A-5FE507067DFD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4F788845-C23B-42A4-91A8-1019139E7049}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
