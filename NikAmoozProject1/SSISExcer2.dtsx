@@ -1,0 +1,174 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/2/2024 12:03:00 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-RFDJ7ET"
+  DTS:CreatorName="DESKTOP-RFDJ7ET\Hosein Agha"
+  DTS:DTSID="{8E954759-4350-4785-B914-F6BD6371618C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="SSISExcer2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{E8B5F32D-D3BD-412B-A098-CAA9915A2E64}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-RFDJ7ET\MSSQLSERVER2022.NikAmooz]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3BEE116A-4114-44B4-B7E2-B63AADA9701A}"
+      DTS:ObjectName="DESKTOP-RFDJ7ET\MSSQLSERVER2022.NikAmooz">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-RFDJ7ET\MSSQLSERVER2022;Initial Catalog=NikAmooz;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SSISExcer2-{3BEE116A-4114-44B4-B7E2-B63AADA9701A}DESKTOP-RFDJ7ET\MSSQLSERVER2022.NikAmooz;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FactInternetSales.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{1254F453-ACAA-4B46-8094-549405B81A7A}"
+      DTS:ObjectName="FactInternetSales.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\Hosein Agha\Documents\NikAmoozSSIS\FactInternetSales.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FactInternetSales.txt 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{13E7A6C5-6B21-4836-A112-1F75F32FBBFF}"
+      DTS:ObjectName="FactInternetSales.txt 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\Hosein Agha\Documents\NikAmoozSSIS\FactInternetSales.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[NikAmooz]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{BBBA89A2-5508-40F3-B49C-C32DE728C036}"
+      DTS:ObjectName="NikAmooz">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\NikAmooz" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Bulk Insert Task"
+      DTS:CreationName="Microsoft.BulkInsertTask"
+      DTS:Description="Bulk Insert Task"
+      DTS:DTSID="{4E30CD67-6F89-4C31-A86D-2B7BBA3B66B4}"
+      DTS:ExecutableType="Microsoft.BulkInsertTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Bulk Insert Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <BulkInsertTask:BulkInsertTaskData
+          BulkInsertTask:CheckConstraints="False"
+          BulkInsertTask:CodePage="65001"
+          BulkInsertTask:SourceConnectionName="{1254F453-ACAA-4B46-8094-549405B81A7A}"
+          BulkInsertTask:DestinationConnectionName="{3BEE116A-4114-44B4-B7E2-B63AADA9701A}"
+          BulkInsertTask:DestinationTableName="[dbo].[FactInternetSales]"
+          BulkInsertTask:FirstRow="2"
+          BulkInsertTask:TableLock="True"
+          BulkInsertTask:FieldTerminator="Comma {,}" xmlns:BulkInsertTask="www.microsoft.com/sqlserver/dts/tasks/bulkinserttask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\File System Task"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{4BCCAC55-D1E9-4610-98D5-5931C7F140D7}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="MoveFile"
+          TaskSourcePath="{13E7A6C5-6B21-4836-A112-1F75F32FBBFF}"
+          TaskDestinationPath="{BBBA89A2-5508-40F3-B49C-C32DE728C036}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{615D12CA-E901-4C56-9651-2C2F997E9C8D}"
+      DTS:From="Package\Bulk Insert Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\File System Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Bulk Insert Task"
+          TopLeft="247,128" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\File System Task"
+          TopLeft="298,229" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="324.5,170">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.5,59"
+              Start="0,0"
+              End="52.5,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="48.5,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.5,29.5"
+                    Point2="52.5,29.5"
+                    Point3="52.5,33.5" />
+                  <mssgle:LineSegment
+                    End="52.5,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
